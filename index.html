@@ -1,19 +1,12 @@
 <!DOCTYPE html>
-<html ng-app="helloWorld">
+<html ng-app="bestSellers">
 <head>
 	<title>Hello World</title>
 	<script type="text/javascript" src="angular.min.js"></script>
-
-	<script type="text/javascript">
-		var app = angular.module("helloWorld", []);
-
-		app.controller("helloWorldCtrl", function($scope){
-			$scope.message = "Hello World";
-		});
-	</script>
+	<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-	<div ng-controller="helloWorldCtrl">
+	<div ng-controller="booksController">
 		{{ message }}
 	</div>
 
