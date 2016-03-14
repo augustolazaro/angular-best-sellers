@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="bestSellers">
 <head>
-	<title>Hello World</title>
+	<title>Angular Best Sellers</title>
 	<link rel="stylesheet" href="lib/stylesheets/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 </head>
@@ -19,16 +19,7 @@
 		<div ng-controller="BestSellersController as bestSellers">
 			{{ errorMessage }}
 			<div class="row">
-			  <div class="col-sm-4 col-md-3" ng-repeat="book in bestSellers.books">
-			    <div class="thumbnail">
-			      <img src="{{ book.book_details[0].book_image }}">
-			      <div class="caption">
-			        <h3 class="book-title">{{ book.book_details[0].title | capitalize | limitTo:18 }}</h3>
-			        <small class="book-author">{{ book.book_details[0].contributor }}</small>
-			        <button class="btn-block btn btn-primary">Buy {{ book.book_details[0].price | currency }}</button>
-			      </div>
-			    </div>
-			  </div>
+				<book ng-repeat="book in bestSellers.books"></book>
 			</div>
 		</div>
 	</div>
@@ -37,5 +28,6 @@
 	<script type="text/javascript" src="javascripts/app.js"></script>
 	<script type="text/javascript" src="javascripts/controllers/bestSellersController.js"></script>
 	<script type="text/javascript" src="javascripts/services/bestSellersService.js"></script>
+	<script type="text/javascript" src="javascripts/directives/bestSellersDirectives.js"></script>
 </body>
 </html>

@@ -1,0 +1,10 @@
+<div class="col-sm-4 col-md-3">
+	<div class="thumbnail">
+		<img src="{{ book.book_details[0].book_image }}">
+		<div class="caption">
+	    	<h3 class="book-title">{{ book.book_details[0].title | capitalize | limitTo:18 }}</h3>
+	    	<small class="book-author">{{ book.book_details[0].contributor }}</small>
+	    	<button class="btn-block btn btn-primary">Buy {{ book.book_details[0].price | currency }}</button>
+	  	</div>
+	</div>
+</div>
